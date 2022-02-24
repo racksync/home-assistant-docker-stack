@@ -21,7 +21,7 @@ cp default.env .env
 ## Let's running
 
 ```
-time docker-compose up -d kong-database
+docker-compose up -d 
 ```
 
 ## Configure

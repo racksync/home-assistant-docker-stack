@@ -29,10 +29,11 @@ time docker-compose up -d kong-database
 1. Setting Node-RED credentials in ``settings.js`` within ``node-red`` directory
 
 2. Setting proper serial port for zigbee dongle at 
-``
+
+```
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
-``
+```
 
 3. Access Home Assistant as you wish
 

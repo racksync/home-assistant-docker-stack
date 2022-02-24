@@ -1,6 +1,6 @@
-![alt text][screenshot]
-
 # Home Assistant Core Docker Deployment with docker-compose
+
+![alt text][screenshot]
 
 ## What is this ?
 
@@ -77,4 +77,4 @@ please check the issue tracker for similar issues before creating one.
 ## Home Automation Consultant Services
 - [RACKSYNC CO., LTD.](https://racksync.com)
 
-[screenshot]: screenshot.png "Home Assistant"
+[screenshot]: screenshot.png "Home Assistant Training Course by RAcKSYNC CO., LTD."

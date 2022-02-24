@@ -1,4 +1,4 @@
-# Home Assistant Core Docker Deployment with docker-compose
+# Home Assistant Core Deployment with docker-compose
 
 ![alt text][screenshot]
 

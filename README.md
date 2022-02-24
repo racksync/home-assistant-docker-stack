@@ -28,8 +28,7 @@ time docker-compose up -d kong-database
 
 1. Setting Node-RED credentials in ``settings.js`` within ``node-red`` directory
 
-2. Setting proper serial port for zigbee dongle at
-
+2. Setting proper serial port for zigbee dongle at 
 ``
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
@@ -41,9 +40,9 @@ time docker-compose up -d kong-database
 
 If you deploy on remote please access with ip address that you running at
 
-**Home Assistant** http://localhost:8123 or http://homeassistant.local:8123 
-**Node-RED** http://localhost:1880 
-**Zigbee2MQTT** http://localhost:8888 
+- **Home Assistant** http://localhost:8123 or http://homeassistant.local:8123 
+- **Node-RED** http://localhost:1880 
+- **Zigbee2MQTT** http://localhost:8888 
 
 
 ## Quick version jumping
@@ -59,7 +58,7 @@ change default value in `.env` file as you wish
 | `Z2M_VER`     | latest |
 | `NR_VER`      | latest |
 
-**rebuild with**
+rebuild with
 
 ```
 docker-compose up -d --no-deps --build <service>
@@ -69,9 +68,12 @@ docker-compose up -d --no-deps --build <service>
 
 please check the issue tracker for similar issues before creating one.
 
-## Credit
+## Credits
 
 - [Home Assistant Core](https://www.home-assistant.io/faq/ha-vs-hassio/)
 - [Home Assistant Docker Images](https://hub.docker.com/r/homeassistant/home-assistant)
+
+## Home Automation Consultant Services
+- [RACKSYNC CO., LTD.](https://racksync.com)
 
 [logo]: https://github.com/home-assistant/assets/blob/master/logo/logo.png "Home Assistant"

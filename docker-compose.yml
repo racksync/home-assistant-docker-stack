@@ -1,0 +1,79 @@
+version: "3.7"
+services:
+   
+  portainer:
+    image: portainer/portainer:latest
+    container_name: portainer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
+    ports:
+     - 9000:9000
+    networks:
+      - backend
+    restart: always
+    environment:
+      - TZ=$SET_TZ
+      
+  mqtt:
+    container_name: mqtt
+    image: eclipse-mosquitto:latest
+    volumes:
+      - ./mqtt:/mosquitto/
+    ports:
+      - 1883:1883
+      - 9001:9001
+    network_mode: host
+    restart: always
+    environment:
+      TZ: $SET_TZ
+
+  hass:
+    container_name: hass
+    image: homeassistant/home-assistant:$HA_VER
+    volumes:
+      - ./hass_config:/config
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: host
+    ports:
+      - 8123:8123
+    privileged: true
+    restart: always
+    environment:
+      TZ: $SET_TZ
+
+ 
+  nodered:
+    container_name: nodered
+    image: nodered/node-red:$NR_VER
+    volumes:
+      - ./node-red:/data
+      - /etc/localtime:/etc/localtime:ro 
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+     - 1880:1880
+    networks:
+      - backend
+    restart: always
+    environment:
+      TZ: $SET_TZ
+
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt:$Z2M_VER
+    volumes:
+      - ./zigbee2mqtt:/app/data
+    expose:
+      - "8888"
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    privileged: true 
+    restart: always
+    networks:
+      - backend
+    environment:
+      TZ: $SET_TZ
+
+networks:
+  backend:
+    external:
+      name: backend

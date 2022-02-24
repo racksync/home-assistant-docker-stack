@@ -18,7 +18,7 @@ Rename or Copy `default.env` to `.env`
 cp default.env .env
 ```
 
-## Let's running
+## Running with docker-compose
 ```
 docker-compose up -d 
 ```

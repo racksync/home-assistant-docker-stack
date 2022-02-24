@@ -19,7 +19,6 @@ cp default.env .env
 ```
 
 ## Let's running
-
 ```
 docker-compose up -d 
 ```
@@ -52,7 +51,7 @@ If you deploy on remote please access with ip address that you running at
 
 change default value in `.env` file as you wish
 
-| Variable name | Default value |
+| Variable      | Default value |
 |---------------|---------------|
 | `SET_TZ`      | latest |
 | `HA_VER`      | latest |
